@@ -1,5 +1,5 @@
 /**
- * Template code for Dijkstra's shortest path algorithm (O(N logN) version)
+ * Template code for Dijkstra's shortest path algorithm
  * 
  *   dist[i]: shortest distance from source to i
  *   
@@ -7,6 +7,11 @@
  * 2. Go through the adjacency list to find connected nodes
  * 3. If the distance from the current node to the next node is better, update
  * 
+ * Time complexity: O(V logE)
+ *   Where:
+ *   V is the number of nodes, 
+ *   E is the number of edges
+ *
  * Verification: https://cses.fi/problemset/result/3255742/
  * 
  * Notes: 
@@ -102,45 +107,3 @@ signed main() {
     cout << "\n";
     return 0;
 }
-
-// O(N^2)
-/*
-int n,m; // vertices, edges
-int connect[101][101]; // connectivity matrix
-int dis[101]; // distance from node i to rest
-bool visited[101];
-
-int main(){
-    cin>>n>>m;
-    for (int i=1;i<=m;i++){
-        int a,b,c; // value of a between vertices b and c
-        cin>>a>>b>>c;
-        connect[b][c]=a;
-        connect[c][b]=a;
-    }
-
-    fill_n(dis,n+1,INF); // init distance to source node as infinity
-    dis[1]=0; // set the dis from source node to itself to 0
-
-    for (int i=1;i<=n;i++){ 
-        int mini=0,mindis=INF;
-        for (int j=1;j<=n;j++){
-            if (!visited[j] && dis[j]<mindis){ // find the unvisited nodes 
-                            // that have the smallest distance to the source node
-                mindis=dis[j];
-                mini=j;
-            }
-        }
-
-        visited[mini]=true; // mark the found node as visited
-
-        for (int j=1;j<=n;j++){
-            if (connect[mini][j] && connect[mini][j]+dis[mini]<dis[j]) // for all node j 
-                // that is connected to node mini, if the distance can be shorted by going through
-                // node i, change dis[j].
-                dis[j]=connect[mini][j]+dis[mini];
-        }
-    }
-    cout<<dis[n]<<endl; // output the distance to the desired node
-    return 0;
-}*/
