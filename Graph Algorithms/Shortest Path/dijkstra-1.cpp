@@ -4,7 +4,7 @@
  *   dist[i]: shortest distance from source to i
  *   
  * 1. Start with the source node
- * 2. Go through the adjacency list to find connected nodes
+ * 2. Go through the adjacency list to find connected nodes by using a priority queue
  * 3. If the distance from the current node to the next node is better, update
  * 
  * Time complexity: O(V logE)
