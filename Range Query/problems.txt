@@ -1,0 +1,25 @@
+Common solving techniques:
+1. Flattening a tree with euler tour, and then matching every subtree with an interval on the segment tree.
+2. Storing more than one value in each node.
+3. Walking on the segment tree (ex. first position with value > x)
+4. Compressing segment tree with sorting
+5, Ordered set on each node
+
+More segment trees:
+1. Lazy segment tree (RURQ)
+2. 2D segment tree
+3. Compressed 2D segment tree
+4. Sparse segment tree
+5. Persistent segment trees
+
+Applications (variou queries):
+1. Distinct value queries
+2. Polynomial updates
+3. K-th smallest element in the range [l, r]
+4. Closest element greater than x
+
+Other applications:
+1. LIS
+2. Line sweep
+3. Heavy light decomposition
+4. LCA with sparse table
