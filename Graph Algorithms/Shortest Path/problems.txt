@@ -1,0 +1,22 @@
+Different problems that could be solved with shortest paths
+
+Q1. Shortest K (1 ≤ K ≤ 10) paths of each node on a graph
+A1. Store a priority queue for each of the nodes. We update the node's priority queue with 2 conditions:
+  1. pq.size < K
+  2. pq.maximum_node > current path length
+  
+Q2. Shortest path from s to t, but the path must contain at least 1 node from a certain set of nodes S
+A2. Alter the distance array to dist[i][j][2], we now consider 2 separate cases when updating the minimum path.
+  dist[i][j][0] means that we haven't gotten to a node in S, dist[i][j][1] means we have.
+  
+Q3. 2 values for each edge that have no correlation. For example: http://www.usaco.org/index.php?page=viewproblem2&cpid=210 
+A3. Consider using binary search to limit the second value
+
+Q4: 2 values for each edge that have correlation (ex. lexicographical SP).
+A4: Write extra code to handle the cases. In the lexicographical SP example, evaluate when 2 paths has the exact same length.
+
+Common solving techniques:
+1. When there are specific checkpoints that a path must contain, you can start the SP algo from the checkpoints as well.
+2. Reverse edges in directed graphs so that you can break a path into 2 sub-paths. So a path (i, j) turns into (i, k) <-> (k, j)
+3. Sometimes BFS will suffice, so there may be no need to do SP.
+4. For more complicated problems, you may need to do a basic SP first and then using the value of the old SP to calculate dp.
