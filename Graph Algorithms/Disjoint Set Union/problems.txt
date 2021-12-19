@@ -2,6 +2,19 @@ Q1. Size of components
 A1. Just set up another array size[] that represents the size of a component. 
     Generally, if there are more properties, just set up more arrays. But be careful of the initial values.
 
+Q2. Finding the number of holes in a each component
+xxx
+x.x
+xxx
 
-A lot of DSU problems have to do with sorting of the edges. (ex. usaco.org/index.php?page=viewproblem2&cpid=384).
-Kruskal's algorithm also uses this technique.
+A2. Assuming the values on the border of the holes is higher than the inside, we can sort the cells.
+    Then we do 2 DSUs, the first one in increasing order so the holes are processed first
+    The second one in decreasing order. We have to match the results of the 2 DSUs to figure out the answer (USACO valleys)
+    
+
+
+Common solving techniques:
+1. A lot of DSU problems have to do with sorting of the edges. (ex. usaco.org/index.php?page=viewproblem2&cpid=384).
+   Kruskal's algorithm also uses this technique.
+2. Small to large merging might be used when combining components
+3. Deleting nodes one by one --> adding nodes one by one.
