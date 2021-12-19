@@ -1,0 +1,7 @@
+Q1. Size of components
+A1. Just set up another array size[] that represents the size of a component. 
+    Generally, if there are more properties, just set up more arrays. But be careful of the initial values.
+
+
+A lot of DSU problems have to do with sorting of the edges. (ex. usaco.org/index.php?page=viewproblem2&cpid=384).
+Kruskal's algorithm also uses this technique.
