@@ -1,0 +1,8 @@
+Q1: 2 values for each edge
+A1: Similar to SP, but if the evaluation function is in a fractional form (like ∑v_i / ∑e_i), consider binary searching a decimal.
+
+Common solving techniques:
+1. Sometimes it's hard to see through that the problem is asking about MST. 
+Hard to see:
+  I would walk 500 miles
+  Portals
